@@ -1,1 +1,1 @@
-Test file
+void main() {}
