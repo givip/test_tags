@@ -24,4 +24,5 @@ jobs:
         RELEASE_BRANCHES: release.*,hotfix.*,master
         WITH_V: true
         DEFAULT_BUMP: none
+        PRERELEASE_SUFFIX: build
 
