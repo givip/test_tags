@@ -1,0 +1,27 @@
+name: Bump version
+on:
+  push:
+    branches:
+      - develop
+      - release
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+        # NOTE @v2 uses the token as an auth http header. Set it to
+        # a Personal Access Token instead of secrets.GITHUB_TOKEN
+        # so that tag pushes trigger repo push events.
+        # Reference: https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/7
+        token: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
+
+    - name: Bump version and push tag
+      uses: JeremyLWright/github-tag-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
+        RELEASE_BRANCHES: release.*,hotfix.*,master
+        WITH_V: true
+        DEFAULT_BUMP: none
+
