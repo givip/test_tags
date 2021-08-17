@@ -22,6 +22,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
         RELEASE_BRANCHES: release.*,hotfix.*,master
+        PRERELEASE_SUFFIX: stage
+        TAG_CONTEXT: branch
         WITH_V: true
         DEFAULT_BUMP: none
 
