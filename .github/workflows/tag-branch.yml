@@ -23,6 +23,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
         RELEASE_BRANCHES: release.*,hotfix.*,master
         PRERELEASE_SUFFIX: stage
+        INITIAL_VERSION: v1.0.0-stage.1
         TAG_CONTEXT: branch
         WITH_V: true
         DEFAULT_BUMP: none
