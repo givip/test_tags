@@ -26,5 +26,4 @@ jobs:
         INITIAL_VERSION: v1.0.0-stage.1
         TAG_CONTEXT: branch
         WITH_V: true
-        DEFAULT_BUMP: none
 
