@@ -18,7 +18,7 @@ jobs:
         token: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
 
     - name: Bump version and push tag
-      uses: JeremyLWright/github-tag-action@master
+      uses: anothrNick/github-tag-action@1.35.0
       env:
         GITHUB_TOKEN: ${{ secrets.JEREMY_REPO_TAG_SCOPE_ACCESS_TOKEN }}
         RELEASE_BRANCHES: release.*,hotfix.*,master
